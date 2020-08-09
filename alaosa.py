@@ -24,8 +24,6 @@ back_right = Motor(Port.D)
 left_speed = 0
 right_speed = 0
 
-last_sec = 0
-
 gamepad = Gamepad() # Creating gamepad handler
 brick.sound.beep() # Playing sound when ready
 
