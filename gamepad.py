@@ -58,4 +58,4 @@ class Gamepad:
         return GamepadEvent(self.event_file.read(STRUCT_SIZE)) # Reading next event
     
     def cleanup(self):
-        self.evemt_file.close() # Closing file handler
+        self.event_file.close() # Closing file handler
