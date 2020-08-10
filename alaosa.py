@@ -1,5 +1,8 @@
 #!/usr/bin/env pybricks-micropython
 
+# Documentation:
+# https://docs.pybricks.com/en/latest/hubs.html#ev3-brick-mindstorms
+
 #System imports
 from pybricks import ev3brick as brick
 from pybricks.ev3devices import Motor
@@ -8,9 +11,9 @@ from pybricks.parameters import Port
 #Own imports
 from gamepad import *
 
-# Linear scaling function
-def scale(val, src, dst):
-    return (float(val - src[0]) / (src[1] - src[0])) * (dst[1] - dst[0]) + dst[0]
+# Converting from range (0,255) to (-100,100)
+def scale(val):
+    return 200 * float(val/255) - 100
 
 # Motor ports
 # A B
@@ -19,10 +22,6 @@ front_left = Motor(Port.A)
 front_right = Motor(Port.B)
 back_left = Motor(Port.C)
 back_right = Motor(Port.D)
-
-# Declaring motor speed variables
-left_speed = 0
-right_speed = 0
 
 gamepad = Gamepad() # Creating gamepad handler
 brick.sound.beep() # Playing sound when ready
@@ -37,16 +36,14 @@ while event:
     # Reading analog stick input and adjusting motor speed
     if event.type == EVENT_ANALOG:
         if event.code == ANALOG_LEFT_VERTICAL: 
-            left_speed = scale(event.value, (0,255), (100,-100))
+            left_voltage = scale(event.value)
+            front_left.dc(left_voltage)
+            back_left.dc(-left_voltage)
         if event.code == ANALOG_RIGHT_VERTICAL:
-            right_speed = scale(event.value, (0,255), (100,-100))
+            right_voltage = scale(event.value)
+            front_right.dc(right_voltage)
+            back_right.dc(-right_voltage)
     
-    # Setting motor voltages
-    front_left.dc(left_speed)
-    front_right.dc(right_speed)
-    back_left.dc(-left_speed)
-    back_right.dc(-right_speed)
-
     event = gamepad.next() # Reading next event
 
 gamepad.cleanup() # Cleaning up gamepad
