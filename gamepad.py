@@ -51,11 +51,15 @@ class GamepadEvent:
 
 # Gamepad class for both projects
 class Gamepad:
+
+     # Opening file in read binary mode
     def __init__(self):
-        self.event_file = open(FILE_HANDLER, "rb") # Opening file in read binary mode
+        self.event_file = open(FILE_HANDLER, "rb")
     
+    # Reading next event
     def next(self):
-        return GamepadEvent(self.event_file.read(STRUCT_SIZE)) # Reading next event
+        return GamepadEvent(self.event_file.read(STRUCT_SIZE))
     
+    # Closing file handler
     def cleanup(self):
-        self.event_file.close() # Closing file handler
+        self.event_file.close()

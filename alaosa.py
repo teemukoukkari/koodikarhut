@@ -1,19 +1,7 @@
 #!/usr/bin/env pybricks-micropython
 
-# Documentation:
-# https://docs.pybricks.com/en/latest/hubs.html#ev3-brick-mindstorms
-
-#System imports
-from pybricks import ev3brick as brick
-from pybricks.ev3devices import Motor
-from pybricks.parameters import Port
-
-#Own imports
-from gamepad import *
-
-# Converting from range (0,255) to (-100,100)
-def scale(val):
-    return 200 * float(val/255) - 100
+# Own imports
+from common import *
 
 # Motor ports
 # A B
@@ -23,27 +11,30 @@ front_right = Motor(Port.B)
 back_left = Motor(Port.C)
 back_right = Motor(Port.D)
 
-gamepad = Gamepad() # Creating gamepad handler
-brick.sound.beep() # Playing sound when ready
+# Function that stops all motors
+def stop_motors():
+    front_left.dc(0)
+    front_right.dc(0)
+    back_left.dc(0)
+    back_right.dc(0)
 
-event = gamepad.next() # Reading first event
-while event:
+# Event handler, called from common.py
+def on_event(event):
 
-    #Playing sound if X pressed
-    if event.type == EVENT_BUTTON and event.code == BUTTON_X and event.value == BUTTON_PRESS:
-        brick.sound.beep(500, 500, 50)
-        
-    # Reading analog stick input and adjusting motor speed
+    # Reading analog stick input and adjusting motor voltages
     if event.type == EVENT_ANALOG:
         if event.code == ANALOG_LEFT_VERTICAL: 
             left_voltage = scale(event.value)
-            front_left.dc(left_voltage)
-            back_left.dc(-left_voltage)
-        if event.code == ANALOG_RIGHT_VERTICAL:
+            front_left.dc(-left_voltage)
+            back_left.dc(left_voltage)
+        elif event.code == ANALOG_RIGHT_VERTICAL:
             right_voltage = scale(event.value)
-            front_right.dc(right_voltage)
-            back_right.dc(-right_voltage)
-    
-    event = gamepad.next() # Reading next event
+            front_right.dc(-right_voltage)
+            back_right.dc(right_voltage)
 
-gamepad.cleanup() # Cleaning up gamepad
+# Cleanup function, called from common.py
+def on_cleanup():
+    stop_motors()
+
+# Entering main loop, defined in common.py
+main_loop(on_event, on_cleanup)
