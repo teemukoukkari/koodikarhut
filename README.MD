@@ -61,4 +61,4 @@ Ylaosa.py:
 -Kutsutaan common.py:n koodia  
 
 ## Yhteystiedot
-Jos tulee ongelmia tai kysyttävää ohjelmasta voitte laittaa sähköpostia osoitteeseen teemu.koukkari@gmail.com
+Olen koodikarhujen tutor. Jos tulee kysyttävää tai ongelmia koodiin liittyen sähköpostia voi laittaa osoitteeseen teemu.koukkari@gmail.com
