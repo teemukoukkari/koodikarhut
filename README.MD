@@ -10,11 +10,11 @@ Pistän koodin, jota käytämme omalla robotilla koodikarhut kansioon. Se voi ol
 
 Käynnistettävät ohjelmat ovat alaosa.py ja ylaosa.py
 
-Jos Bluetooth ei toimi käynnistyksen jälkeen ("Not Available"), uudenlleenkäynnistys auttaa.
+Jos Bluetooth ei toimi käynnistyksen jälkeen ("Not Available"), uudelleenkäynnistys auttaa.
 
 ## Moottorien portit
 
-Kaikkien moottorien pitää olla kytkettyinä, muuten ohjelma ei käynnisty. Alaosaa ohjataan kuten alkuperäisessääkin koodissa. Yläosan moottorien ohjaukset lukee alempana, ne ovat muuttuneet. Ohjausta on moottorien jännitteiden kiroituksen osalta optimoitu, joka parantaa viivettä.
+Kaikkien moottorien pitää olla kytkettyinä, muuten ohjelma ei käynnisty. Alaosaa ohjataan kuten alkuperäisessäkin koodissa. Yläosan moottorien ohjaukset lukee alempana, ne ovat muuttuneet. Ohjausta on moottorien jännitteiden kirjoituksen osalta optimoitu, joka parantaa viivettä.
 
 Alaosan moottorien portit:
 A: etuvasen
@@ -37,7 +37,7 @@ Options: Ohjelman pysäyttäminen oikein
 Olen kommentoinnut koodin suhteellisen hyvin englanniksi, joten muokkaaminen on suhteellisen helppoa jos osaa.
 
 Gamepad.py:
--Täällä on määritelty ohjaimen eventtejen tyypit, koodit sekä arvot
+-Täällä on määritelty ohjaimen eventtien tyypit, koodit sekä arvot
 -Lisäksi on eventtejen lukemiseen liittyvät määritykset
 -GamepadEvent luokassa on koko tapahtuma joka tulee ohjaimelta
 -Gamepad luokassa on tapahtumien vastaanottamiseen liittyvää koodia
