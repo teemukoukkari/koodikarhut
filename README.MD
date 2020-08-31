@@ -6,7 +6,7 @@ Yleinen kansiosta löytyy ohjelma jonka saa helposti toimimaan myös muiden robo
 
 Vanha kansiosta löytyy alkuperäinen koodi, jota voi käyttää jos muokattu ei lähde toimimaan. Joukkuekohtaiset jutut, esimerkiksi kuvat poistin koodista, muuten samanlainen.
 
-Pistän koodin, jota käytämme omalla robotilla koodikarhut kansioon. Se voi olla hankalampi käyttää muille, sillä siellä on meidän robotille suunniteltuja ominaisuuksia. Pistän kuitenkin julkiseksi, saa hyödyntää ja käyttää, mutta en dokumentoi tänne.
+Pistän koodin, jota käytämme omalla robotilla koodikarhut kansioon. Se voi olla hankalampi käyttää muille, sillä siellä on meidän robotille suunniteltuja ominaisuuksia. Pistän kuitenkin julkiseksi, saa hyödyntää ja käyttää, mutta en dokumentoi tänne. Toistaiseksi siellä ei ole mitään erilaista.
 
 Käynnistettävät ohjelmat ovat alaosa.py ja ylaosa.py
 
