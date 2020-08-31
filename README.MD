@@ -14,7 +14,7 @@ Jos Bluetooth ei toimi käynnistyksen jälkeen ("Not Available"), uudelleenkäyn
 
 ## Moottorien portit
 
-Kaikkien moottorien pitää olla kytkettyinä, muuten ohjelma ei käynnisty. Alaosaa ohjataan kuten alkuperäisessäkin koodissa. Yläosan moottorien ohjaukset lukee alempana, ne ovat muuttuneet. Ohjausta on moottorien jännitteiden kirjoituksen osalta optimoitu, joka parantaa viivettä.
+Kaikkien moottorien pitää olla kytkettyinä, muuten ohjelma ei käynnisty. Alaosaa ohjataan kuten alkuperäisessäkin koodissa. Vain portit ovat vaihtuneet. Yläosan moottorien ohjaukset lukee alempana, ne ovat muuttuneet. Ohjausta on moottorien jännitteiden kirjoituksen osalta optimoitu, joka parantaa viivettä.
 
 Alaosan moottorien portit:  
 A: etuvasen  
