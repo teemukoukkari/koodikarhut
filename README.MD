@@ -2,11 +2,11 @@
 
 ## Yleisrakenne
 
-Yleinen kansiosta löytyy ohjelma jonka saa helposti toimimaan myös muiden roboteilla. 
+Yleinen kansiosta löytyy ohjelma jonka saa helposti toimimaan myös muiden roboteilla. Päivittäessä teen sinne aina uuden kansion (esim. yleinen2), joten vanha ohjelma säilyy myös päivittäessä.
 
 Vanha kansiosta löytyy alkuperäinen koodi, jota voi käyttää jos muokattu ei lähde toimimaan. Joukkuekohtaiset jutut, esimerkiksi kuvat poistin koodista, muuten samanlainen.
 
-Pistän koodin, jota käytämme omalla robotilla koodikarhut kansioon. Se voi olla hankalampi käyttää muille, sillä siellä on meidän robotille suunniteltuja ominaisuuksia. Pistän kuitenkin julkiseksi, saa hyödyntää ja käyttää, mutta en dokumentoi tänne. Toistaiseksi siellä ei ole mitään erilaista.
+Laitan keskeneräisen koodin, jota testaan koodikarhut kansioon. Se voi olla hankalampi käyttää muille, sillä siellä on meidän robotin pohjalta tehtyjä ominaisuuksia. Pistän kuitenkin tänne, saa hyödyntää ja käyttää. Päivitän sitä mukaa yleiseen ja dokumentoin kun otamme itse koodin käytöön.
 
 Käynnistettävät ohjelmat ovat alaosa.py ja ylaosa.py
 
@@ -14,7 +14,7 @@ Jos Bluetooth ei toimi käynnistyksen jälkeen ("Not Available"), uudelleenkäyn
 
 ## Moottorien portit
 
-Kaikkien moottorien pitää olla kytkettyinä, muuten ohjelma ei käynnisty. Alaosaa ohjataan kuten alkuperäisessäkin koodissa. Vain portit ovat vaihtuneet. Yläosan moottorien ohjaukset lukee alempana, ne ovat muuttuneet. Ohjausta on moottorien jännitteiden kirjoituksen osalta optimoitu, joka parantaa viivettä.
+Kaikkien moottorien pitää olla kytkettyinä, muuten ohjelma ei käynnisty. Alaosaa ohjataan kuten alkuperäisessäkin koodissa, vain portit ovat vaihtuneet. Yläosan moottorien ohjaukset lukee alempana, ne ovat muuttuneet. Ohjausta on moottorien jännitteiden kirjoituksen osalta optimoitu, joka parantaa viivettä.
 
 Alaosan moottorien portit:  
 A: etuvasen  
@@ -34,7 +34,7 @@ Options: Ohjelman pysäyttäminen oikein
 
 ## Koodin rakenne tarkemmin
 
-Olen kommentoinnut koodin suhteellisen hyvin englanniksi, joten muokkaaminen on suhteellisen helppoa jos osaa.
+Olen kommentoinnut koodin suhteellisen hyvin englanniksi, joten muokkaaminen on melko helppoa jos osaa.
 
 Gamepad.py:  
 -Täällä on määritelty ohjaimen eventtien tyypit, koodit sekä arvot  
@@ -61,4 +61,4 @@ Ylaosa.py:
 -Kutsutaan common.py:n koodia  
 
 ## Yhteystiedot
-Jos tulee ongelmia tai kysyttävää ohejelmasta votite laittaa sähköpostia osoitteeseen teemu.koukkari@gmail.com
+Jos tulee ongelmia tai kysyttävää ohjelmasta voitte laittaa sähköpostia osoitteeseen teemu.koukkari@gmail.com
