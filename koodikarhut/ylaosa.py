@@ -21,9 +21,9 @@ def on_event(event):
         if event.code == ANALOG_LEFT_HORIZONTAL:
             motor_rotation.dc(scale(event.value))
         elif event.code == ANALOG_LEFT_VERTICAL:
-            motor_angle.dc(-scale(event.value))
+            motor_angle.dc(-0.25 * scale(event.value))
         elif event.code == ANALOG_RIGHT_HORIZONTAL:
-            motor_missile.dc(scale(event.value))
+            motor_missile.dc(0.25 * scale(event.value))
 
     if event.type == EVENT_BUTTON:
         if event.code == BUTTON_L1:
