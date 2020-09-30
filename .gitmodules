@@ -1,0 +1,3 @@
+[submodule "taistelurobotti-virtaluupit"]
+	path = taistelurobotti-virtaluupit
+	url = https://github.com/jerryjokivaara/taistelurobotti-virtaluupit
